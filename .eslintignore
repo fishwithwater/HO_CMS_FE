@@ -2,5 +2,6 @@
 /public/
 /dist/
 /script/.cache
-/*.js
+*.js
+*.vue
 /node_modules/

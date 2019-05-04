@@ -1,5 +1,6 @@
 import adminConfig from './admin'
 import bookConfig from './book' // 引入图书管理路由文件
+import swiperTemplateRouter from './swiper-template'
 import pluginsConfig from './plugins'
 import Utils from '@/lin/utils/util'
 
@@ -27,6 +28,7 @@ let homeRouter = [
     right: ['查询所有日志'],
   },
   bookConfig,
+  swiperTemplateRouter,
   adminConfig,
 ]
 
