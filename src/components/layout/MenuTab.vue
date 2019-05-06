@@ -74,7 +74,7 @@ export default {
     width: 120px;
     height: 38px;
     cursor: pointer;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
 
     .imgIcon {

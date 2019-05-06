@@ -6,7 +6,7 @@
         <i class="iconfont icon-fanhui"></i> 返回
       </span>
     </div>
-    <lin-1px></lin-1px>
+    <el-divider></el-divider>
     <div class="wrap">
       <el-row>
         <el-col

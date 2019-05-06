@@ -10,7 +10,7 @@
           @contextmenu.prevent.native="onTags">
           <i v-if="!filterIcon(stageList[item.stageId].icon)" :class="stageList[item.stageId].icon"></i>
           <img v-else :src="stageList[item.stageId].icon" style="width:16px;" />
-          <span style="padding: 0 5px;">{{ stageList[item.stageId].title | filterTitle }}</span>
+          <span style="padding: 0 3px;">{{ stageList[item.stageId].title | filterTitle }}</span>
           <span class="el-icon-close" @click.prevent.stop="close(index)" />
         </router-link>
       </swiper-slide>
