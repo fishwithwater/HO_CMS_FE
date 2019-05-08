@@ -1,4 +1,4 @@
-const swiperTemplateRouter = {
+const swiperRouter = {
   route: null,
   name: null,
   title: '首页轮播',
@@ -24,6 +24,15 @@ const swiperTemplateRouter = {
         filePath:'views/swiperItem/SwiperItemList.vue',
         inNav:true,
         icon:'el-icon-date'
+      },{
+        title:'新增轮播项',
+        type:'view',
+        name:'SwiperItemAdd',
+        route:'/swiper-item/add',
+        filePath:'views/swiperItem/SwiperItemAdd.vue',
+        inNav:false,
+        icon:'iconfont icon-add',
+        right:['创建轮播项']
       }]
     },
     {
@@ -57,4 +66,4 @@ const swiperTemplateRouter = {
   ],
 }
 
-export default swiperTemplateRouter
+export default swiperRouter

@@ -1,10 +1,7 @@
 <template>
     <div class="container">
         <div class="title">
-            <span>修改轮播模版</span>
-            <span class="back" @click="back">
-        <i class="iconfont icon-fanhui"></i> 返回
-      </span>
+            <span>新增轮播模版</span>
         </div>
         <el-divider></el-divider>
         <div class="wrap">
@@ -91,11 +88,6 @@
 
   const week = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
   export default {
-    props: {
-      editSwiperItemId: {
-        type: Number,
-      },
-    },
     data() {
       return {
         loading: false,
@@ -112,7 +104,7 @@
           month: ''
         },
         swiperTemplateList: [],
-        authorList:[{id:0,name:'官方'}],
+        authorList: [{id: 0, name: '官方'}],
         pickerOptions: {
           shortcuts: [{
             text: '今天',
@@ -139,16 +131,15 @@
     },
     async mounted() {
       this.loading = true
-      this.form = await SwiperItem.get(this.editSwiperItemId)
       this.swiperTemplateList = await SwiperTemplate.getAll()
       this.loading = false
     },
     methods: {
       async submitForm() {
-        const res = await SwiperItem.edit(this.editSwiperItemId, this.form)
+        const res = await SwiperItem.add(this.form)
         if (res.error_code === 0) {
           this.$message.success(`${res.msg}`)
-          this.$emit('editClose')
+          this.resetForm(formName)
         }
       },
       chooseDate(e) {
@@ -161,9 +152,6 @@
       // 重置表单
       resetForm(formName) {
         this.$refs[formName].resetFields()
-      },
-      back() {
-        this.$emit('editClose')
       },
     },
   }

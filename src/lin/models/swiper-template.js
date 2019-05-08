@@ -27,6 +27,10 @@ class SwiperTemplate {
     })
   }
 
+  async getAll(){
+    return await get('v1/swiper-template/list-all')
+  }
+
   async nextPage() {
     await this.incresePage()
     return this.getLists({})

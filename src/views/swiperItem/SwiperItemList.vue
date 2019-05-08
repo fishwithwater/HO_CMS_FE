@@ -65,7 +65,10 @@
           {prop: 'url', label: '资源'},
           {prop: 'template.name', label: '模板'},
           {prop: 'template.displayName', label: '模板名称'},
-          {prop: 'author.nickname', label: '作者'},
+          {prop: 'authorId', label: '作者',
+            formatter:(row,column,cellValue,index)=>{
+              return '官方'
+            }},
           {prop: 'month', label: '刊号'},
         ], // 表头数据
         loading: false,
