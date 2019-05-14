@@ -4,62 +4,6 @@
       <div class="title">
         <div class="welcome">
           <img src="../../assets/img/about/welcome.png" alt="">
-          <!-- <span class="version">当前版本0.0.1-alpha1</span> -->
-        </div>
-        <p class="desc">您还可以通过 GitHub 地址下载源码:
-          <span>
-            <a href="https://github.com/TaleLin/lin-cms-vue" target="block">前端仓库</a>
-          </span>
-          <span>
-            <a href="https://github.com/TaleLin/lin-cms-flask" target="block">后端仓库</a>
-          </span>
-        </p>
-      </div>
-    </div>
-    <div class="team">
-      <div class="team-detail">
-        <div class="team-box">
-          <div class="team-title">产品团队</div>
-          <ul class="team-ul">
-            <li>
-              <span class="shadow-box">
-                <i class="team-shadow"></i>
-              </span>
-              <span class="team-role">策划</span>
-              <span class="team-name">七月</span>
-            </li>
-            <li>
-              <span class="shadow-box">
-                <i class="team-shadow"></i>
-              </span>
-              <span class="team-role">研发</span>
-              <span class="team-name">
-                <ul>
-                  <li>Pedro</li>
-                  <li>一飞</li>
-                  <li>凉面</li>
-                  <li>圈圈</li>
-                  <li>家乐</li>
-                </ul>
-              </span>
-            </li>
-            <li>
-              <span class="shadow-box">
-                <i class="team-shadow"></i>
-              </span>
-              <span class="team-role">设计</span>
-              <span class="team-name">瓜瓜</span>
-            </li>
-          </ul>
-        </div>
-        <div class="team-icon">
-          <img src="../../assets/img/about/team-icon.png" alt="">
-        </div>
-      </div>
-      <div class="official-account">
-        <div class="official-account-box">
-          <img src="../../assets/img/about/qrcode.jpg" alt="">
-          <p>扫码关注林间有风公众号</p>
         </div>
       </div>
     </div>

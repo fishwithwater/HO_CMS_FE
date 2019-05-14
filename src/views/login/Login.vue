@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="team-name">
-      <img src="@/assets/img/login/team-name.png" alt="">
+<!--      <img src="@/assets/img/login/team-name.png" alt="">-->
     </div>
     <div class="form-box" v-loading="loading" element-loading-background="rgba(0, 0, 0, 0)">
       <div class="title">

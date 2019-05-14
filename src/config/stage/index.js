@@ -1,13 +1,13 @@
 import adminConfig from './admin'
-import bookConfig from './book' // 引入图书管理路由文件
 import swiperRouter from './swiper'
+import wxuserRouter from './wxuser'
 import pluginsConfig from './plugins'
 import Utils from '@/lin/utils/util'
 
 // eslint-disable-next-line import/no-mutable-exports
 let homeRouter = [
   {
-    title: '林间有风',
+    title: '氢橙物语',
     type: 'view',
     name: Symbol('about'),
     route: '/about',
@@ -27,17 +27,8 @@ let homeRouter = [
     order: 1,
     right: ['查询所有日志'],
   },
-  {
-    title: '404',
-    type: 'view',
-    name: Symbol('404'),
-    route: '/404',
-    filePath: 'views/error-page/404.vue',
-    inNav: false,
-    icon: 'iconfont icon-rizhiguanli',
-  },
-  bookConfig,
   swiperRouter,
+  wxuserRouter,
   adminConfig,
 ]
 

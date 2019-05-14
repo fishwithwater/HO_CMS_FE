@@ -23,19 +23,40 @@
         :index="currentIndex"
         width="55">
       </el-table-column>
-      <el-table-column
-        v-for="item in filterTableColumn"
-        :key="item.id"
-        :prop="item.prop"
-        :label="item.label"
-        :show-overflow-tooltip="true"
-        :filters="item.filters ? item.filters : null"
-        :filter-method="item.filterMethod ? item.filterMethod: null"
-        :column-key="item.filterMethod ? item.prop: null"
-        :formatter="item.formatter ? item.formatter : null"
-        :sortable="item.sortable ? item.sortable : false"
-        :fixed="item.fixed ? item.fixed : false"
-        :width="item.width ? item.width : ''"></el-table-column>
+      <template v-for="item in filterTableColumn">
+        <el-table-column
+                v-if="!item.formatterNode"
+                :key="item.id"
+                :prop="item.prop"
+                :label="item.label"
+                :show-overflow-tooltip="true"
+                :filters="item.filters ? item.filters : null"
+                :filter-method="item.filterMethod ? item.filterMethod: null"
+                :column-key="item.filterMethod ? item.prop: null"
+                :formatter="item.formatter ? item.formatter : null"
+                :sortable="item.sortable ? item.sortable : false"
+                :fixed="item.fixed ? item.fixed : false"
+                :width="item.width ? item.width : ''">
+        </el-table-column>
+        <el-table-column
+                v-else
+                :key="item.id"
+                :prop="item.prop"
+                :label="item.label"
+                :show-overflow-tooltip="true"
+                :filters="item.filters ? item.filters : null"
+                :filter-method="item.filterMethod ? item.filterMethod: null"
+                :column-key="item.filterMethod ? item.prop: null"
+                :sortable="item.sortable ? item.sortable : false"
+                :fixed="item.fixed ? item.fixed : false"
+                :width="item.width ? item.width : ''">
+          <template slot-scope="scope">
+            <div v-html="item.formatter(scope.row,scope.column,scope.row[item.props],$index)">
+            </div>
+          </template>
+        </el-table-column>
+      </template>
+
       <el-table-column
         v-if="operate.length > 0"
         label="操作"
